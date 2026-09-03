@@ -22,6 +22,33 @@ The dataset acquisition and real-time sensing are calibrated for the following s
 | **Baud Rate**        | 921,600 bps (High-throughput serial streaming)      |
 | **Multi-RX Support** | Up to 8 RX nodes simultaneously (spatial diversity) |
 
+
+---
+
+## 🖥️ GUI Overview
+
+### 1. Subcarrier Response to Human Activity
+![Subcarrier Response to Activity](docs/screenshots/subcarrier_response_to_activity.jpeg)
+*Live subcarrier amplitude surge during human activity with the corresponding
+I (Real) / Q (Imaginary) component response — demonstrating the motion
+sensitivity of the 2.4 GHz CSI link (TX: 3 antennas → RX: 1 antenna).*
+
+### 2. Signal Processing Pipeline
+![Signal Processing Pipeline](docs/screenshots/signal_processing_pipeline.jpeg)
+*Empty-room calibration (≥150 frames), Hampel filtering, ensemble anomaly
+detection (Isolation Forest + LOF + Elliptic Envelope) with manual threshold
+override, and selective CWT feature extraction.*
+
+### 3. Data Collection & Labeling
+![Data Collection & Labeling](docs/screenshots/data_collection_labeling.jpeg)
+*Labeled session recording: object type, activity, distance, environment,
+1-second auto-marking, and real-time frame/RSSI/status feedback.*
+
+### 4. Live RF Parameters
+![RF Parameters](docs/screenshots/rf_parameters.jpeg)
+*Real-time RF telemetry: MAC, RSSI, rate, MCS, bandwidth, noise floor,
+channel, antenna, signal mode, and CSI length (64 subcarriers @ 2.4 GHz).*
+
 ---
 
 ## 🏗️ System Architecture
