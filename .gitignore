@@ -1,0 +1,57 @@
+# ==========================================
+# Python & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ==========================================
+# Runtime Data, Datasets & Exports
+# (DO NOT push collected data to the code repo)
+# ==========================================
+data/
+exports/
+multi_rx_session/
+models/
+*.csv
+*.npy
+*.npz
+*.joblib
+*.pkl
+*.h5
+*.pt
+*.pth
+csi_data.csv
+csi_data_log.txt
+
+# ==========================================
+# IDE & OS Files
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# CSI runtime data & exports
+data/
+exports/
+multi_rx_session/
+models/
+*.npy
+*.joblib
+*.pkl
+csi_data.csv
+csi_data_log.txt
+pipeline_state.joblib
