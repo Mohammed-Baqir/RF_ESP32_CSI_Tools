@@ -34,12 +34,20 @@ The dataset acquisition and real-time sensing are calibrated for the following s
 I (Real) / Q (Imaginary) component response — demonstrating the motion
 sensitivity of the 2.4 GHz CSI link (TX: 3 antennas → RX: 1 antenna).*
 
-### 2. Signal Processing Pipeline
-![Signal Processing Pipeline](docs/screenshots/signal_processing_pipeline.jpeg)
+### 2. Data Collection & Labeling (Dataset Acquisition Engine)
+![Data Collection & Labeling](docs/screenshots/signal_processing_pipeline.jpeg)
 
-*Empty-room calibration (≥150 frames), Hampel filtering, ensemble anomaly
-detection (Isolation Forest + LOF + Elliptic Envelope) with manual threshold
-override, and selective CWT feature extraction.*
+*Structured session recording — fully independent of the signal-processing
+pipeline. The panel provides: live capture banner (CAPTURE: LIVE with
+last-frame age), label selectors (object type, activity, distance,
+environment), experimental condition (C0–C3), carrying state (object/null),
+`person_present` / `object_static` flags, anonymized `person_id`
+(required for C1/C2), session setup `config.json` loader (E2/E3),
+Start/Stop Recording Session, Mark Current Event, SYNC anchor [S],
+1-second auto-marking, a marked-events log, and a live readout
+(Frames | 64 subcarriers | RSSI | Rate | Channel).
+The Real-Time Classification controls (model loading) appear directly below.*
+
 
 ### 3. Data Collection & Labeling
 ![Data Collection & Labeling](docs/screenshots/data_collection_labeling.jpeg)
