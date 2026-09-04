@@ -122,7 +122,23 @@ This Python application acts as the **Host-Side Analyzer**. Before running this 
 ## ⚠️ Known Limitations
 - System overload with large models (RTX 3070, 32 GB RAM)
 - Anomaly Detection not yet integrated with labeled dataset
-- 
+
+### ⚠️ Experimental Conditions (C0–C3)
+Each labeled event is tagged with a four-level physical-condition code:
+
+- **C0 (Baseline):** no human presence and no carried object; used for
+  empty-scene reference and calibration.
+- **C1 (Single-Person):** one identified participant performing an activity;
+  `person_id` is recorded.
+- **C2 (Multi-Person / Interaction):** two or more participants, or a
+  person interacting with a carried object; `person_id` identifies the
+  target subject.
+- **C3 (Object/Metal):** a non-human object (metal, glass, wood, plastic)
+  present in the environment; `object_static` flags whether it is stationary.
+
+Conditions C1/C2 map primarily to group `01_human_activity`, while C0/C3
+map to groups `02_metal_object` and `03_environment_with_metal`.
+
 ## 🚀 Installation & Usage
 
 ### Prerequisites
