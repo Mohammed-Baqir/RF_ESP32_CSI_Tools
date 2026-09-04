@@ -97,7 +97,7 @@ An advanced, unsupervised ensemble machine learning pipeline designed to detect 
 
 ---
 
-## 📦 Associated Dataset & ML Configuration
+## 📦 Associated Dataset & Configuration
 
 This software is the primary ingestion engine for the **[RF_ESP32_Dataset](https://github.com/Mohammed-Baqir/RF_ESP32_Dataset)**.
 
